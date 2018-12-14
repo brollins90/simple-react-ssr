@@ -4,7 +4,7 @@ const proxy = require("http-proxy-middleware");
 
 babelRegister({
     ignore: /\/(build|node_modules)\//,
-    presets: ["react-app"]
+    presets: ["env", "react-app"]
 });
 
 const express = require("express");

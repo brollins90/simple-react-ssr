@@ -2,10 +2,15 @@
 require("ignore-styles");
 
 // Make babel work
-const babelRegister = require("babel-register");
+const babelRegister = require("@babel/register");
 babelRegister({
-    ignore: /\/(build|node_modules)\//,
-    presets: ["env", "react-app"]
+    ignore: [/\/(build|node_modules)\//],
+    presets: ["@babel/preset-env", "@babel/preset-react"],
+    plugins: [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-syntax-dynamic-import"
+    ]
 });
 
 // Add hot reloading to the server

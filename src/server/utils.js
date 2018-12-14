@@ -8,7 +8,7 @@ export const getAssets = () =>
     new Promise((resolve, reject) => {
         // In dev we check the dev server
         if (process.env.NODE_ENV === "development") {
-            fetch("http://localhost:3000/asset-manifest.json")
+            fetch("http://localhost:3001/asset-manifest.json")
                 .then(res => res.json())
                 .then(json => resolve(json));
         } else {

@@ -13,7 +13,7 @@ export default class Page extends Component {
         this.setState({ active: true });
     };
     render() {
-        const link = (
+        const link = ( // eslint-disable-next-line
             <a className="bold" onClick={this.handleClick}>
                 Click Here
             </a>
